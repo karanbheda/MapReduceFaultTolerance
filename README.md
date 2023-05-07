@@ -98,3 +98,10 @@ To test the fault tolerance of the MapReduce framework, one can simply shutdown 
 - Hadoop NameNode: http://localhost:9870/
 - Hadoop ResourceManager: http://localhost:8088/
 - Hadoop JobHistoryServer: http://localhost:19888/
+- Hadoop JobTracker: http://localhost:50030/
+
+For 1gb input file, the program takes ~2-3mins to run (normal execution & after killing few tasks)
+JobTracker provides the data transfer rate statistics. (Note: the counters keep updating every few seconds)
+JobHistoryServer provides the overall statistics for the entire job
+
+The stats collected can then be plotted to show a data transfer over time graph.
